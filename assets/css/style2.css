@@ -1,0 +1,161 @@
+
+    /* Global Section Styling */
+    body {
+        
+        color: #00ff00; /* Green hacker text */
+        font-family: 'Courier New', Courier, monospace; /* Hacker style font */
+        margin: 0;
+        padding: 0;
+    }
+
+    #section3 {
+        padding: 20px;
+        text-align: center;
+    }
+
+    #section3 h1 {
+        margin-bottom: 20px;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #00ff00;
+    }
+
+    /* Card container */
+    .card-container {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
+    }
+
+    /* Individual card styling */
+    .card {
+        background: #161b22; /* Slightly lighter dark */
+        border: 1px solid #00ff00;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 255, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: scale(1.05); /* Slight zoom on hover */
+        box-shadow: 0 8px 20px rgba(0, 255, 0, 0.4);
+    }
+
+    /* Image styling */
+    .card img {
+        width: 100%;
+        max-height: 150px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        border: 2px solid #00ff00;
+    }
+
+    .card h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        font-size: 1rem;
+        color: #00ff00;
+        margin-bottom: 20px;
+    }
+
+    /* Button styling */
+    .btn-view {
+        padding: 10px 20px;
+        background-color: transparent;
+        color: #00ff00;
+        border: 2px solid #00ff00;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .btn-view:hover {
+        background-color: #00ff00;
+        color: #0d1117; /* Background color on hover */
+    }
+
+    /* Responsive design */
+    @media (max-width: 1024px) {
+        .card-container {
+            grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+        }
+    }
+
+    @media (max-width: 768px) {
+        .card-container {
+            grid-template-columns: 1fr; /* 1 column for mobile */
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+  /* Global Section Styling */
+
+
+  #section4 {
+      padding: 30px;
+      text-align: center;
+      background-color: #161b22;
+      border-top: 2px solid #00ff00;
+  }
+
+  #section4 h1 {
+      font-size: 2rem;
+      color: #00ff00;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+  }
+
+  /* Style for the map container */
+  .map-container {
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+      height: 0;
+      max-width: 100%;
+      background: #000;
+      border-radius: 10px;
+  }
+
+  .map-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+  }
+
+  /* Responsive design */
+  @media (max-width: 1024px) {
+      #section4 h1 {
+          font-size: 1.5rem;
+      }
+  }
+
+  @media (max-width: 768px) {
+      #section4 h1 {
+          font-size: 1.2rem;
+      }
+  }
+

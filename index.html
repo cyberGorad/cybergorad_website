@@ -1,0 +1,559 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from cybergorad.alwaysdata.net/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 May 2025 06:56:11 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rakotoarivony alifera">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devenir hacker | Madagascar cybersécurité</title>
+    <meta name="description" content="comment devenir hacker a madagascar">
+    <meta name="keywords" content="hacking éthique, devenir hacker, cybersécurité Madagascar, formation hacker, pentesting Madagascar, formation termux, cybergorad, cybexus">
+
+     <!-- Favicons -->
+  <link href="#" rel="icon">
+  <link href="#" rel="apple-touch-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!--CSS AND BOOTSTRAP-->
+    <link rel="stylesheet" href="src/bootstrap.min.css">
+    <link rel="stylesheet" href="w3.css">
+    <!--MAin css source-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style2.css">
+    <!--SCRIPT javascript => (js_plugins)-->
+    <script src="animation.js"></script>
+    <script src="assets/js/main.js"></script>
+   
+    <script src="src/bootstrap.bundle.min.js"></script>
+    <script src="src/jquery.min.js"></script>
+ 
+
+    <!-- Ajoutez les CDN pour React et ReactDOM -->
+    <script src="assets/react/react.development.js"></script>
+    <script src="assets/react/react-dom.development.js"></script>
+
+    <!-- Si vous souhaitez utiliser JSX, ajoutez Babel -->
+    <script src="assets/react/babel.js"></script>
+      <!--<script type="text/babel" src="app.js"></script>-->
+
+
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+</head>
+
+
+
+
+
+
+
+
+<body class="w3-animate-opacity">
+
+
+  <span id="logo"><img src="assets/img/cybergorad.png" class="w3-image w3-hide-small" alt="logo" width="150px" height="130px" style="margin-top:-40px"></span>
+
+
+
+  <nav id="navbar" class="w3-card-4 w3-hide-small">
+
+  <a id="nav_li" href="#section3" style="color: #00FF00;">Formation Hacking éthique</a>
+
+
+
+  
+</nav>
+
+
+
+
+
+
+
+
+    <!--AOS (Animate On Scroll) -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialiser AOS
+        AOS.init();
+    </script>
+    <!--AOS (Animate On Scroll) -->
+
+
+
+
+<section id="section1">
+
+  <header class="w3-display-container w3-wide">
+    <img class="w3-image w3-card-4" src="assets/img/slogan.png" alt="fond" width="100%" height="300px">
+    <div class="w3-display-left w3-padding-large" style="margin-top: -50px;">
+
+
+  
+
+      <div id="typewritter"></div>
+
+      <script type="text/babel" src="typewritter.js"></script>
+
+
+      
+      
+
+    </div>
+  </header>
+</section>
+<br>
+
+<h1 style="color: red; text-align: center; font-weight:bold;">⚠️ DISCLAIMER ⚠️</h1>
+<p style="text-align: center;">👁️ Lire attentivement avant de continuer...  
+</p>
+<br>
+
+
+<div id="terminal" class="terminal" data-aos="zoom-out" data-aos-duration="1200" data-aos-delay="100">
+  <div id="output"></div>
+</div>
+
+<script>
+  const terminal = document.getElementById("output");
+const textLines = [
+  "[+] Toutes les formations que j'offre sont tous des buts éducatif",
+  "[+] Je ne suis pas résponsables de vos actes après la fomrations....",
+  "[+] Utiliser les connaisances pour le but éthiques",
+  " ",
+  "",
+  "# Si vous êtes prêt , Continuer ...",
+];
+
+let lineIndex = 0;
+let charIndex = 0;
+
+function typeText() {
+  if (lineIndex < textLines.length) {
+    const line = textLines[lineIndex];
+    if (charIndex < line.length) {
+      terminal.innerHTML += line[charIndex];
+      charIndex++;
+      setTimeout(typeText, 20); // Vitesse d'écriture des caractères
+    } else {
+      terminal.innerHTML += "\n"; // Nouvelle ligne
+      charIndex = 0;
+      lineIndex++;
+      setTimeout(typeText, 500); // Pause entre les lignes
+    }
+  } else {
+    // Ajouter un curseur clignotant
+    if (!document.querySelector(".cursor")) {
+      const cursor = document.createElement("span");
+      cursor.className = "cursor";
+      terminal.appendChild(cursor);
+    }
+  }
+}
+
+// Lancer l'animation
+setTimeout(typeText, 1000); // Début avec une pause initiale
+
+</script>
+
+
+<style>
+  /* Terminal container */
+.terminal {
+  background-color: #000;
+  color: #0f0;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  overflow-y: auto;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  border: 2px solid rgba(0, 255, 0, 0.5);
+  margin: 20px auto;
+  position: relative;
+}
+
+/* Text in the terminal */
+#output {
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+/* Terminal cursor */
+.cursor {
+  display: inline-block;
+  width: 10px;
+  height: 20px;
+  background-color: #0f0;
+  margin-left: 2px;
+  animation: blink 0.6s infinite;
+}
+
+/* Cursor blinking animation */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+</style>
+
+
+
+
+<section id="section2"><!--<h1>Nos Services</h1>-->
+
+
+
+
+
+
+
+<style>
+
+</style>
+  </div>
+</div>
+
+
+
+
+<div class="w3-row w3-container">
+  <div class="w3-center w3-padding-64">
+    <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16 element-to-animate">Mes services ?</span>
+  </div>
+
+
+  <div class="container-fluid">
+    <div class="row g-4"> <!-- Ajout de gaps plus importants -->
+      <div class="col-sm-12 col-md-6 col-lg-3 neon-box">
+        <a href="tel:+261387581356" class="text-decoration-none">
+          <h3 class="text-center">Développement Web</h3>
+        </a>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-3 neon-box">
+        <a href="tel:+261387581356" class="text-decoration-none">
+          <h3 class="text-center">Formation en cybersécurité et hacking éthique</h3>
+        </a>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-3 neon-box">
+        <a href="tel:+261387581356" class="text-decoration-none">
+          <h3 class="text-center">Vente de Tools et logiciels hacking</h3>
+        </a>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-3 neon-box">
+        <a href="tel:+261387581356" class="text-decoration-none">
+          <h3 class="text-center">Diagnostic et réparation ordinateur</h3>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  
+
+
+  <style>
+    /* Style général */
+body {
+  background-color: #000; /* Fond noir */
+  color: #0f0; /* Texte vert hacker */
+  font-family: 'Courier New', Courier, monospace; /* Police style terminal */
+}
+
+/* Style des boîtes */
+.neon-box {
+  background-color: rgba(0, 0, 0, 0.8); /* Fond noir translucide */
+  border: 2px solid rgba(0, 255, 0, 0.5); /* Bordure néon vert translucide */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.8); /* Effet néon */
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation au survol */
+}
+
+.neon-box:hover {
+  transform: scale(1.05); /* Légère mise en relief */
+  box-shadow: 0 0 30px rgba(0, 255, 0, 1); /* Glow accentué */
+}
+
+/* Style des titres */
+.neon-box h3 {
+  font-size: 1.5rem;
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.6);
+}
+
+/* Animation glitch (facultatif) */
+.neon-box:hover h3 {
+  animation: glitch 0.3s infinite;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 2px rgba(0, 255, 0, 0.8), -2px -2px rgba(0, 255, 0, 0.6);
+  }
+  50% {
+    text-shadow: -2px 2px rgba(0, 255, 0, 0.8), 2px -2px rgba(0, 255, 0, 0.6);
+  }
+  100% {
+    text-shadow: 2px -2px rgba(0, 255, 0, 0.8), -2px 2px rgba(0, 255, 0, 0.6);
+  }
+}
+
+
+
+/*PROFIL START*/
+
+#profil {
+  transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
+  position: relative; /* Nécessaire pour les glitchs */
+  z-index: 1; /* Assure que les glitchs ne sont pas coupés */
+}
+
+#profil:hover {
+  transform: scale(1.1) rotate(-1deg); /* Agrandissement et légère rotation */
+  filter: brightness(1.3) hue-rotate(90deg); /* Effet de couleur hacky */
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.7), 0 0 40px rgba(0, 255, 0, 0.5); /* Glow vert */
+}
+
+/* Effet glitch : avant */
+#profil::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: inherit;
+  z-index: -1;
+  clip-path: polygon(0 0, 100% 0, 100% 20%, 0 10%);
+  transform: translate(-2px, -2px);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+#profil:hover::before {
+  opacity: 0.5;
+  animation: glitch 0.3s steps(2, end) infinite;
+}
+
+/* Effet glitch : après */
+#profil::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: inherit;
+  z-index: -1;
+  clip-path: polygon(0 80%, 100% 70%, 100% 100%, 0 100%);
+  transform: translate(2px, 2px);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+#profil:hover::after {
+  opacity: 0.5;
+  animation: glitch 0.3s steps(2, end) infinite;
+}
+
+/* Animation glitch */
+@keyframes glitch {
+  0% {
+    transform: translate(2px, 0);
+  }
+  33% {
+    transform: translate(-2px, -2px);
+  }
+  66% {
+    transform: translate(2px, 2px);
+  }
+  100% {
+    transform: translate(-2px, 0);
+  }
+}
+/*PROFIL END*/
+  </style>
+
+
+</section>
+
+<div class="w3-row w3-container">
+  <div class="w3-center w3-padding-64">
+    <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16 element-to-animate">Formation disponibles  ?</span>
+  </div>
+
+
+  
+
+  <section id="section3">
+
+    <div class="card-container">
+        <div class="card element-to-animate">
+            <img src="assets/img/facebook.jpg" alt="Projet 1" >
+            <h2>Phishing (Piratage Facebook)</h2>
+            <p>[*] Avec cette méthode on peut pirater un comptes facebook grâce a la faille humaine</p>
+
+            <h3>Prix: 5000AR | 25000Fmg</h3>
+            <button class="btn-view" onclick="window.location = 'tel:+261387581356'"> Commmander</button>
+
+        </div>
+
+
+        <div class="card element-to-animate">
+            <img src="assets/img/termux.jpg" alt="Projet 2">
+            <h2>Formation Termux</h2>
+            <p>[*] Formations complete en Termux , Vous apprendrez les bases et les commandes fondamentales en Termux</p>
+            <h3>Prix: 10000AR | 50000Fmg</h3>
+            <button class="btn-view" onclick="window.location = 'tel:+261387581356'">Commmander</button>
+
+        </div>
+
+
+        <div class="card element-to-animate">
+            <img src="assets/img/espionnage.jpg" alt="Projet 3">
+            <h2>Espionnages éthiques</h2>
+            <p>[*] On va pirater des caméra , des microphones , localisation d'un Téléphone ou ordinateur</p>
+            <h3>Prix: 5000AR | 25000Fmg</h3>
+            <button class="btn-view" onclick="window.location = 'tel:+261387581356'">Commmander</button>
+
+        </div>
+
+
+        <div class="card element-to-animate">
+          <img src="assets/img/backdoor.jpg" alt="Projet 1">
+          <h2>Contrôle a distance d'un ordinateur , Téléphones (CONCEPT DU BACKDOOR)</h2>
+          <p>[*] Vous serez en mésure de simuler un vrai attaque et en fin vous serez capables de réaliser une vrai attaques </p>
+          <h3>Prix: 10000AR | 50000Fmg</h3>
+          <button class="btn-view" onclick="window.location = 'tel:+261387581356'">Commmander</button>
+
+      </div>
+
+
+      <div class="card element-to-animate">
+          <img src="assets/img/keylogger.jpg" alt="Projet 2">
+          <h2>Keylogger (FONDAMENTALE)</h2>
+          <p>[*] C'est quoi un keylogger ? , Savez vous que je peut récuper tous ce que vous tapez sur votre ordinateur ou Téléphone ?</p>
+          <h3>Prix: 5000AR | 25000Fmg</h3>
+          <button class="btn-view" onclick="window.location = 'tel:+261387581356'">Commmander</button>
+
+      </div>
+
+
+      <div class="card element-to-animate">
+          <img src="assets/img/wifi.jpg" alt="Projet 3">
+          <h2>PENTESTING WIFI</h2>
+          <p>[*] Dans cette parties on vas decouvrir comment entrer dans un réseau wifi vulnérable ...</p>
+          <h3>Prix: 5000AR | 25000Fmg</h3>
+          <button class="btn-view" onclick="window.location = 'tel:+261387581356'">Commmander</button>
+
+      </div>
+    </div>
+</section>
+
+
+
+<div class="w3-row w3-container">
+  <div class="w3-center w3-padding-64">
+    <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16 element-to-animate">Formation spéciales </span>
+  </div>
+
+  <div class="card-container">
+    <div class="card element-to-animate">
+        <img src="assets/img/devenir_hacker.jpg" alt="Projet 1" >
+        <h2>Devenir un expert sur le hacking éthique</h2>
+        <p>[*] Sur cette Formation , Vous allez Acqurir des concept d'attaques réelles , comment s'en proteger contre ces attaques</p>
+
+        <h3>Prix: 20000AR | 100000Fmg <span style="color: red;">Promotion</span></h3>
+        <button class="btn-view" onclick="window.location = 'tel:+261387581356'"> Commmander</button>
+
+    </div>
+
+    <div class="card element-to-animate">
+      <img src="assets/img/video.jpg" alt="Projet 1" >
+      <h2>Vidéo Formation en cybersécurité</h2>
+      <p>[*] Ventes de formation completes en cybersécurité (théories + pratiques)</p>
+
+      <h3>Prix: 10000AR | 500000Fmg <span style="color: red;">Promotion</span></h3>
+      <button class="btn-view" onclick="window.location = 'tel:+261387581356'"> Commmander</button>
+
+  </div>
+
+  <div class="card element-to-animate">
+    <img src="assets/img/parrot_x_kali.jpg" alt="Projet 1" >
+    <h2>Système d'exploitation + Installation</h2>
+    <p>[*] Packs disponibles : Kali Linux , Parrot , Windows 10 , windows 11 , Windows XP</p>
+
+    <h3>Prix: 10000AR | 50000Fmg <span style="color: red;">Promotion</span></h3>
+    <button class="btn-view" onclick="window.location = 'tel:+261387581356'"> Commmander</button>
+
+</div>
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<br><br>
+
+
+<hr>
+<img class="w3-image" src="assets/img/hack_the_planet.jpg" alt="cybergorad" width="100%" style="background-size: cover;">
+<hr>
+
+<br><br>
+
+
+
+<footer class="w3-container   w3-center" style="background-image: url(assets/img/background_wide.png); background-size: cover;margin: 0;padding: 0;">
+
+<p style="text-align: center;">Clicker pour appeller..</p>
+  <a href="tel:+261387581356" style="text-decoration: none;">
+     +261 38 75 813 56
+</a>
+<a href="mailto:cecilliaranarivelo@gmail.com" style="text-decoration: none;">
+  <h6>Rakotoarivonyalifera27@gmail.com</h6>
+</a>
+
+
+  <a href="#" class="w3-button w3-margin" style="background-color: grey;"><i class="fa fa-arrow-up w3-margin-right"></i>Revenir en haut haut</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fab fa-facebook"></i>
+    <a href="https://github.com/cybergorad"><i class="fab fa-github"></i></a>
+    <i class="fab fa-linkedin"></i>
+    <i class="fas fa-key"></i> <!-- pour Root Me -->
+    
+
+
+
+  </div>
+  <p>Powered by <a href="#" title="W3.CSS" target="_blank" class="w3-hover-text-green">cybergorad</a></p>
+</footer>
+
+
+
+
+</body>
+
+<!-- Mirrored from cybergorad.alwaysdata.net/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 07 May 2025 06:56:35 GMT -->
+</html>
