@@ -89,15 +89,17 @@
 <section id="section1">
 
   <header class="w3-display-container w3-wide">
-    <img class="w3-image w3-card-4" src="assets/img/slogan.png" alt="fond" width="100%" height="300px">
-    <div class="w3-display-left w3-padding-large" style="margin-top: -50px;">
+    <video autoplay muted loop playsinline class="w3-image w3-card-4" id="bg-video">
+      <source src="assets/cybergorad animation.mp4" type="video/mp4">
+      Ton navigateur ne supporte pas la vidéo HTML5.
+    </video>
 
 
   
 
-      <div id="typewritter"></div>
+     
 
-      <script type="text/babel" src="typewritter.js"></script>
+      <!--   <div id="typewritter"></diface<script type="text/babel" src="typewritter.js"></script>-->
 
 
       
@@ -235,26 +237,14 @@ setTimeout(typeText, 1000); // Début avec une pause initiale
 
   <div class="container-fluid">
     <div class="row g-4"> <!-- Ajout de gaps plus importants -->
-      <div class="col-sm-12 col-md-6 col-lg-3 neon-box">
-        <a href="tel:+261387581356" class="text-decoration-none">
-          <h3 class="text-center">Développement Web</h3>
-        </a>
-      </div>
-      <div class="col-sm-12 col-md-6 col-lg-3 neon-box">
+
+      <div class="col-sm-12 col-md-12 col-lg-12 neon-box">
         <a href="tel:+261387581356" class="text-decoration-none">
           <h3 class="text-center">Formation en cybersécurité et hacking éthique</h3>
         </a>
       </div>
-      <div class="col-sm-12 col-md-6 col-lg-3 neon-box">
-        <a href="tel:+261387581356" class="text-decoration-none">
-          <h3 class="text-center">Vente de Tools et logiciels hacking</h3>
-        </a>
-      </div>
-      <div class="col-sm-12 col-md-6 col-lg-3 neon-box">
-        <a href="tel:+261387581356" class="text-decoration-none">
-          <h3 class="text-center">Diagnostic et réparation ordinateur</h3>
-        </a>
-      </div>
+
+
     </div>
   </div>
   
@@ -304,7 +294,8 @@ body {
   }
   100% {
     text-shadow: 2px -2px rgba(0, 255, 0, 0.8), -2px 2px rgba(0, 255, 0, 0.6);
-  }
+  }  <div class="w3-center w3-padding-64">
+    <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16 element-to-animate">Formation disponibles  ?</span>
 }
 
 
@@ -392,14 +383,144 @@ body {
   </div>
 
 
+
+<style>
+
+
+  .card {
+      width: 100%;
+      max-width: 900px;
+      border: 2px solid #00FF00;
+      box-shadow: 0 0 25px #00FF00;
+      padding: 25px;
+      border-radius: 12px;
+      background: linear-gradient(180deg, #001a00, #000);
+      animation: glow 2s infinite alternate;
+
+  }
+
+  @keyframes glow {
+      from { box-shadow: 0 0 15px #00FF00; }
+      to   { box-shadow: 0 0 35px #00FF00; }
+  }
+
+  h1, h2 {
+      text-align: center;
+      text-shadow: 0 0 10px #00FF00;
+  }
+
+  ul {
+      list-style: none;
+      padding-left: 0;
+  }
+
+  ul li::before {
+      content: "▸ ";
+      color: #00FF00;
+  }
+
+  .danger {
+      color: #ff3333;
+      font-weight: bold;
+      text-shadow: 0 0 10px red;
+  }
+
+  .price {
+      font-size: 1.5em;
+      text-align: center;
+      margin-top: 15px;
+  }
+
+  .contact {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 1.1em;
+  }
+
+  .bonus {
+      margin-top: 25px;
+      padding: 15px;
+      border: 1px dashed #00FF00;
+      background: rgba(0, 255, 0, 0.05);
+  }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+  <h1>🔴 Formation Hacking Éthique & Cybersécurité</h1>
+  <h2>Théorie + Pratique (Scénarios Réels)</h2>
+
+  <h3>🧠 Thèmes de la formation</h3>
+  <ul>
+      <li>Bases de la cybersécurité & hacking éthique</li>
+      <li>Penser comme un hacker – Social Engineering</li>
+      <li>Réseaux informatiques : SSH, FTP, DNS, DHCP</li>
+      <li>Installation laboratoire hacking (Parrot OS – VM ou Dual Boot)</li>
+      <li>Personnalisation environnement hacker (curseur, thème, GRUB)</li>
+  </ul>
+
+  <h3>🟣 Compétences Techniques</h3>
+  <ul>
+      <li>Bases technologies Web</li>
+      <li>Développement de votre propre site web</li>
+      <li>Hébergement gratuit sécurisé</li>
+      <li>Projet : Site de phishing + hébergement</li>
+  </ul>
+
+  <h3>🕶️ Contrôle à distance</h3>
+  <ul>
+      <li>En laboratoire sécurisé</li>
+      <li class="danger">Scénario réel (ULTRA DANGER)</li>
+  </ul>
+
+  <h3>📡 Sécurité Wi-Fi</h3>
+  <ul>
+      <li>Fonctionnement des réseaux Wi-Fi</li>
+      <li>Techniques d’attaques Wi-Fi</li>
+      <li>Cracking mot de passe Wi-Fi</li>
+      <li class="danger">Phishing via faux point d’accès Wi-Fi (ULTRA DANGER)</li>
+  </ul>
+
+  <h3>🏁 CTF & Projets avancés</h3>
+  <ul>
+      <li>Entraînement Capture The Flag</li>
+      <li class="danger">Accès GRATUIT à la documentation complète IDS-GORAD</li>
+      <li>Bonus & astuces avancées</li>
+  </ul>
+
+  <div class="bonus">
+      🟢 <strong>Bonus Exclusif :</strong><br>
+      Cours PDF spécial <em>Transformation intérieure</em>  
+      (Santé, bien-être mental, discipline et mindset hacker)
+  </div>
+
+  <div class="price">
+      💵 Prix : <strong>30 000 Ar</strong><br>
+      🔴🔴 PROMOTION LIMITÉE 🔴🔴
+  </div>
+
+  <div class="contact">
+      🎥 50+ vidéos professionnelles (Drive – envoi par email)<br>
+      📆 Distribution hebdomadaire<br>
+      📞 Contact : <strong>038 75 813 56</strong>
+  </div>
+
+</div>
+
   
 
   <section id="section3">
+    <div class="w3-center w3-padding-64">
+      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16 element-to-animate">Vous pouvez apprendre des modules seuls</span>
+    </div>
 
     <div class="card-container">
         <div class="card element-to-animate">
             <img src="assets/img/facebook.jpg" alt="Projet 1" >
-            <h2>Phishing (Piratage Facebook)</h2>
+            <h2>Phishing (Pentesting Facebook)</h2>
             <p>[*] Avec cette méthode on peut pirater un comptes facebook grâce a la faille humaine</p>
 
             <h3>Prix: 5000AR | 25000Fmg</h3>
@@ -407,15 +528,6 @@ body {
 
         </div>
 
-
-        <div class="card element-to-animate">
-            <img src="assets/img/termux.jpg" alt="Projet 2">
-            <h2>Formation Termux</h2>
-            <p>[*] Formations complete en Termux , Vous apprendrez les bases et les commandes fondamentales en Termux</p>
-            <h3>Prix: 10000AR | 50000Fmg</h3>
-            <button class="btn-view" onclick="window.location = 'tel:+261387581356'">Commmander</button>
-
-        </div>
 
 
         <div class="card element-to-animate">
@@ -430,7 +542,7 @@ body {
 
         <div class="card element-to-animate">
           <img src="assets/img/backdoor.jpg" alt="Projet 1">
-          <h2>Contrôle a distance d'un ordinateur , Téléphones (CONCEPT DU BACKDOOR)</h2>
+          <h2>Contrôle a distance d'un ordinateur , Téléphones (CONCEPT DU BACKDOOR) avancés sur metasploit / IDS-GORAD</h2>
           <p>[*] Vous serez en mésure de simuler un vrai attaque et en fin vous serez capables de réaliser une vrai attaques </p>
           <h3>Prix: 10000AR | 50000Fmg</h3>
           <button class="btn-view" onclick="window.location = 'tel:+261387581356'">Commmander</button>
@@ -450,9 +562,9 @@ body {
 
       <div class="card element-to-animate">
           <img src="assets/img/wifi.jpg" alt="Projet 3">
-          <h2>PENTESTING WIFI</h2>
+          <h2>PENTESTING WIFI (Captive Portal / Crack mot de passe)</h2>
           <p>[*] Dans cette parties on vas decouvrir comment entrer dans un réseau wifi vulnérable ...</p>
-          <h3>Prix: 5000AR | 25000Fmg</h3>
+          <h3>Prix: 20000AR | 100000Fmg</h3>
           <button class="btn-view" onclick="window.location = 'tel:+261387581356'">Commmander</button>
 
       </div>
@@ -467,22 +579,14 @@ body {
   </div>
 
   <div class="card-container">
-    <div class="card element-to-animate">
-        <img src="assets/img/devenir_hacker.jpg" alt="Projet 1" >
-        <h2>Devenir un expert sur le hacking éthique</h2>
-        <p>[*] Sur cette Formation , Vous allez Acqurir des concept d'attaques réelles , comment s'en proteger contre ces attaques</p>
 
-        <h3>Prix: 20000AR | 100000Fmg <span style="color: red;">Promotion</span></h3>
-        <button class="btn-view" onclick="window.location = 'tel:+261387581356'"> Commmander</button>
-
-    </div>
 
     <div class="card element-to-animate">
       <img src="assets/img/video.jpg" alt="Projet 1" >
-      <h2>Vidéo Formation en cybersécurité</h2>
-      <p>[*] Ventes de formation completes en cybersécurité (théories + pratiques)</p>
+      <h2>Formation online cybersécurité avec cybergorad (teny malagasy)</h2>
+      <p>[*] Ventes de formation completes en cybersécurité (théories + pratiques) partager sur Mail dans DRIVE</p>
 
-      <h3>Prix: 10000AR | 500000Fmg <span style="color: red;">Promotion</span></h3>
+      <h3>Prix: 30000AR | 150000Fmg <span style="color: red;">Promotion</span></h3>
       <button class="btn-view" onclick="window.location = 'tel:+261387581356'"> Commmander</button>
 
   </div>
