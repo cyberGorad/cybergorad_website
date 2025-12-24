@@ -387,16 +387,8 @@ body {
 <style>
 
 
-  .card {
-      width: 100%;
-      max-width: 900px;
-      border: 2px solid #00FF00;
-      box-shadow: 0 0 25px #00FF00;
-      padding: 25px;
-      border-radius: 12px;
-      background: linear-gradient(180deg, #001a00, #000);
-      animation: glow 2s infinite alternate;
-
+.card {
+    background-color: black;
   }
 
   @keyframes glow {
@@ -521,35 +513,43 @@ body {
 
 </style>
 <script>
+  const STORAGE_KEY = "formationCountdownEnd";
 
-    const countdownDate = new Date();
-    countdownDate.setDate(countdownDate.getDate() + 15);
+  let countdownDate = localStorage.getItem(STORAGE_KEY);
 
-    function updateCountdown() {
-        const now = new Date().getTime();
-        const distance = countdownDate - now;
+  if (!countdownDate) {
+      const endDate = new Date();
+      endDate.setDate(endDate.getDate() + 15);
+      countdownDate = endDate.getTime();
+      localStorage.setItem(STORAGE_KEY, countdownDate);
+  } else {
+      countdownDate = parseInt(countdownDate, 10);
+  }
 
-        if (distance < 0) {
-            document.getElementById("countdown").innerHTML =
-                "<span>✅ DISPONIBLE</span>";
-            return;
-        }
+  function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
 
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      if (distance <= 0) {
+          document.getElementById("countdown").innerHTML =
+              "<span style='font-size:1.5em'>✅ DISPONIBLE</span>";
+          localStorage.removeItem(STORAGE_KEY);
+          return;
+      }
 
-        document.getElementById("days").innerText = days;
-        document.getElementById("hours").innerText = hours.toString().padStart(2, "0");
-        document.getElementById("minutes").innerText = minutes.toString().padStart(2, "0");
-        document.getElementById("seconds").innerText = seconds.toString().padStart(2, "0");
-    }
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours.toString().padStart(2, "0");
+      document.getElementById("minutes").innerText = minutes.toString().padStart(2, "0");
+      document.getElementById("seconds").innerText = seconds.toString().padStart(2, "0");
+  }
 
-
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
 </script>
 
 
@@ -625,6 +625,43 @@ body {
   </div>
 
 </div>
+<br><br><br>
+
+<!-- COMOTEUR -->
+<div class="stats">
+  <h2>👨‍💻 Utilisateurs formés</h2>
+  <span id="trained-count">0</span>
+</div>
+
+<style>
+.stats {
+  text-align: center;
+  font-family: 'Courier New', monospace;
+  color: #00FF00;
+  text-shadow: 0 0 10px #00FF00;
+}
+#trained-count {
+  font-size: 3em;
+}
+</style>
+
+<script>
+  const target = 12; // nombre d'utilisateurs formés
+  let count = 0;
+  const speed = 20;
+
+  const counter = document.getElementById("trained-count");
+
+  const interval = setInterval(() => {
+    count++;
+    counter.textContent = count;
+    if (count >= target) clearInterval(interval);
+  }, speed);
+</script>
+
+
+
+<!-- COMPTEUR -->
 
   
 
@@ -760,16 +797,27 @@ body {
 
   <a href="#" class="w3-button w3-margin" style="background-color: grey;"><i class="fa fa-arrow-up w3-margin-right"></i>Revenir en haut haut</a>
   <div class="w3-xlarge w3-section">
-    <i href="#" class="fab fa-facebook"></i>
+    <a href="https://www.facebook.com/profile.php?id=61550115667283" class="fab fa-facebook"></a>
     <a href="https://github.com/cybergorad"><i class="fab fa-github"></i></a>
-    <i class="fab fa-linkedin"></i>
-
-    
-
-
-
+    <!--  <i class="fab fa-linkedin"></i>-->
   </div>
-  <p>Powered by <a href="#" title="W3.CSS" target="_blank" class="w3-hover-text-green">cybergorad</a> 2025</p>
+
+
+
+
+
+  
+  <p>
+    Powered by 
+    <a href="#" title="W3.CSS" target="_blank" class="w3-hover-text-green">cybergorad</a> 
+    <span id="year"></span>
+  </p>
+  
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  
+
 </footer>
 
 
